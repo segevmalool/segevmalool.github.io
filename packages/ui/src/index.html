@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        html, body {
+            height: 100vh;
+            margin: 0;
+        }
+
+        span#blackCol {
+            background-color: #000000;
+            width: 100px;
+            height: 100vh;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        section#app-root {
+            display: flex;
+            flex-direction: row;
+            width: 100vh;
+            height: 100ch;
+        }
+
+        dynamic-lr {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <dynamic-lr></dynamic-lr>
+    <!--<tfjs-model></tfjs-model>-->
+    <script src="bundle.js"></script>
+</body>
+</html>
