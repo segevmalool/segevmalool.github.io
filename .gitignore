@@ -3,3 +3,6 @@
 **/*.iml
 **/node_modules
 **/dist
+
+**/.terraform
+**/*.tfstate*

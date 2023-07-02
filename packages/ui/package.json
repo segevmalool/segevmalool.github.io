@@ -7,7 +7,10 @@
     "build": "npx webpack --config=webpack/webpack.config.cjs",
     "preserve": "npm run build",
     "serve": "npx serve -p 8080 dist",
-    "dockerize": "docker build . -t segbaus-ui"
+    "dockerize:local": "docker buildx build --load --platform linux/amd64 -t segbaus-ui:local .",
+    "dockerize:ecr": "docker buildx build --load --platform linux/amd64 -t 266455520073.dkr.ecr.us-west-2.amazonaws.com/segbaus-ui:latest .",
+    "docker:login": "aws ecr get-login-password | docker login --username=AWS --password-stdin 266455520073.dkr.ecr.us-west-2.amazonaws.com",
+    "docker:push": "docker push 266455520073.dkr.ecr.us-west-2.amazonaws.com/segbaus-ui:latest"
   },
   "author": "",
   "license": "ISC",
