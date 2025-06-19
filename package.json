@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "squash-build": "git branch -D gh-pages && git checkout -b gh-pages && npm run build && (find . -depth 1 | grep -v dist | grep -v '\\.git' | xargs rm -rf) && mv ./dist/* ./ && rmdir dist && git push -f origin gh-pages && git checkout -"
+    "pregh-pages": "npm i",
+    "gh-pages": "git branch -D gh-pages && git checkout -b gh-pages && npm run build && (find . -depth 1 | grep -v dist | grep -v '\\.git' | xargs rm -rf) && mv ./dist/* ./ && rmdir dist && && git add . && git commit -m 'renew' && git push -f origin gh-pages && git checkout -"
   },
   "dependencies": {
     "lit": "^3.3.0"
